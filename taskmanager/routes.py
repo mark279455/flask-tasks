@@ -60,11 +60,9 @@ def add_task():
     return render_template("add_task.html", categories=categories)
 
 
-@app.route("/edit_task/int:task_id>", methods=["GET", "POST"])
+@app.route("/edit_task/<int:task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
-    print("task_id = ", task_id)
     task = Task.query.get_or_404(task_id)
-
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         task.task_name = request.form.get("task_name"),

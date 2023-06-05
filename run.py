@@ -8,5 +8,3 @@ if __name__ == "__main__":
         port=int(os.environ.get("PORT")),
         debug=os.environ.get("DEBUG")
     )
-
-# Database Management Systems  Walkthrough  Creating the Database
