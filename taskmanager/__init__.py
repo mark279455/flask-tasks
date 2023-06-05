@@ -1,3 +1,4 @@
+from taskmanager import routes
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -19,4 +20,4 @@ else:
 # app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
 # db = SQLAlchemy(app)
 
-from taskmanager import routes  # noqa
+# noqa
